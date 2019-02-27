@@ -1,0 +1,29 @@
+body {
+  font: normal 18px Verdana, Arial, sans-serif;
+}
+
+.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 18%;
+  float: left;
+  margin: 1%;
+}
+
+/* Add some padding inside the card container */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.result {
+  width: 100%;
+  height: 50px;
+  background-color: gray;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

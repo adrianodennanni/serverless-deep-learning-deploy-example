@@ -4,3 +4,6 @@ checkpoints/*
 !checkpoints/.keep
 dataset/
 logs/
+.ftpconfig
+model.tflite
+.DS_STORE

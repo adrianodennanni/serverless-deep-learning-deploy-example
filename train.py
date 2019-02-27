@@ -8,29 +8,20 @@ from tensorflow.keras.preprocessing.image import ImageDataGenerator
 BATCH_SIZE = 32
 MAX_EPOCHS = 100
 
-# Generators
-train_generator = ImageDataGenerator(
+# Generator
+generator = ImageDataGenerator(
     data_format='channels_last',
-    rescale=1. / 255,
-    # rotation_range=40,
-    # horizontal_flip=True,
-    # vertical_flip=True
+    rescale=1. / 255
 )
 
-train_batches = train_generator.flow_from_directory(
+train_batches = generator.flow_from_directory(
     batch_size=BATCH_SIZE,
     directory='dataset/cell_images_train',
     target_size=[96, 96],
     class_mode='categorical'
 )
 
-
-val_generator = ImageDataGenerator(
-    data_format='channels_last',
-    rescale=1. / 255
-)
-
-val_batches = train_generator.flow_from_directory(
+val_batches = generator.flow_from_directory(
     batch_size=BATCH_SIZE,
     directory='dataset/cell_images_validation',
     target_size=[96, 96],

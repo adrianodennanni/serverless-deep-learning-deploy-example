@@ -14,7 +14,6 @@ pip install -r requirements.txt
 - GCP Functions uses Python 3.7
 
 
-
 2. Download the dataset from Kaggle, using the Kaggle API:
 ```
 kaggle datasets download -d iarunava/cell-images-for-detecting-malaria
