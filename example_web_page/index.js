@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  serverlessURL = 'https://us-central1-neuronio-edp.cloudfunctions.net/teste-03';
+  serverlessURL = 'your-function-url-goes-here';
 
   const toDataURL = url => fetch(url).then(
     response => response.blob()).then(
