@@ -28,4 +28,8 @@ def inference(request):
 
   for od in OUTPUT_DETAILS:
     for tensor in INTERPRETER.get_tensor(od['index']).tolist():
-      return str({'Parasitized': tensor[0], 'Uninfected': tensor[1]})
+      response = str({'Parasitized': tensor[0], 'Uninfected': tensor[1]})
+      headers = {
+          'Access-Control-Allow-Origin': '*'
+      }
+      return (response, 200, headers)

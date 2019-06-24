@@ -1,0 +1,25 @@
+{
+  "name": "serverless_deep_learning_deploy_example",
+  "version": "1.0.0",
+  "description": "1. Install the dependencies of this project with: ``` pip install -r requirements.txt ```",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adrianodennanni/serverless_deep_learning_deploy_example.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adrianodennanni/serverless_deep_learning_deploy_example/issues"
+  },
+  "homepage": "https://github.com/adrianodennanni/serverless_deep_learning_deploy_example#readme",
+  "dependencies": {
+    "connect": "^3.7.0",
+    "express": "^4.17.1",
+    "serve-static": "^1.14.1"
+  }
+}

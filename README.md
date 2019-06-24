@@ -1,5 +1,7 @@
 # Serverless Deep Learning Deploy examples
 
+## Training the Malaria detection model
+
 1. Install the dependencies of this project with:
 ```
 pip install -r requirements.txt
@@ -12,7 +14,6 @@ pip install -r requirements.txt
 - AWS Lambda uses Python 3.6 or Python 3.7
 
 - GCP Functions uses Python 3.7
-
 
 2. Download the dataset from Kaggle, using the Kaggle API:
 ```
@@ -34,3 +35,17 @@ sh prepare_dataset.sh
 ```
 python train.py
 ```
+
+## Running the demo server
+
+Enter the `/example_web_page` directory and install the libs:
+```bash
+npm i
+```
+
+To start the server:
+```bash
+node server.js
+```
+
+The demo page will be served in `localhost:4000`

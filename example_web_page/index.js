@@ -25,13 +25,15 @@ $(document).ready(function() {
           <h4><b>ID: </b>${cell}</h4>
         </div>
         <div class="result">WAITING FOR RESULT</div>
+        <div class="time"></div>
       </div>
       `
     );
     var img = $(`#${cell}`).children()[0];
 
-    toDataURL(`https://github.com/adrianodennanni/serverless_deep_learning_deploy_example/raw/master/example_web_page/cells/${cell}.png`)
+    toDataURL(`cells/${cell}.png`)
       .then(dataUrl => {
+        var start = Date.now();
         axios({
           method: 'post',
           url: serverlessURL,
@@ -46,7 +48,7 @@ $(document).ready(function() {
           var data = JSON.parse(response.data.replace(/'/g,"\""));
           var parasitized = data['Parasitized'];
           var uninfected = data['Uninfected'];
-          console.log()
+          var miliseconds = Date.now() - start;
           if (parasitized > uninfected) {
             $(`#${cell} div.result`).css("background-color", "red");
             $(`#${cell} div.result`).text('Parasitized');
@@ -54,6 +56,7 @@ $(document).ready(function() {
             $(`#${cell} div.result`).css("background-color", "green");
             $(`#${cell} div.result`).text('Uninfected');
           }
+          $(`#${cell} div.time`).text(`${miliseconds} ms`);
         });
       });
   };

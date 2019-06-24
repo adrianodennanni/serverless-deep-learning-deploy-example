@@ -7,3 +7,4 @@ logs/
 .ftpconfig
 model.tflite
 .DS_STORE
+node_modules
