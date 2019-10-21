@@ -25,5 +25,5 @@ tensorflow-gpu==1.13.0rc2
 termcolor==1.1.0
 tqdm==4.31.1
 Unidecode==1.0.23
-urllib3==1.22
+urllib3==1.24.2
 Werkzeug==0.15.3
