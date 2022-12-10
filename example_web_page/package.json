@@ -19,7 +19,7 @@
   "homepage": "https://github.com/adrianodennanni/serverless_deep_learning_deploy_example#readme",
   "dependencies": {
     "connect": "^3.7.0",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "serve-static": "^1.14.1"
   }
 }
